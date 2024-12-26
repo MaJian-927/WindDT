@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市三维气象数字孪生系统</title>
+    <style>
+        /* 页面基础样式 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* 禁用滚动条 */
+            font-family: Arial, sans-serif;
+        }
+
+        /* 背景图片模糊 */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(8px); /* 设置背景模糊效果 */
+            z-index: -1; /* 确保背景层在内容层后面 */
+        }
+
+        /* 内容样式 */
+        .content {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 1;
+            color: white;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 内容不再垂直居中，而是从顶部开始 */
+            align-items: center; /* 水平方向居中 */
+            overflow: hidden; /* 防止内容溢出 */
+        }
+
+        /* Logo 和 文字的容器 */
+        .header {
+            display: flex;
+            align-items: center; /* 垂直对齐 */
+            justify-content: center; /* 水平居中对齐 */
+            margin-bottom: 20px; /* Logo 和文字容器与下面内容之间的间距 */
+            position: absolute;
+            top: 20px; /* 使 Logo 和文字容器放置在页面顶部 */
+        }
+
+        /* Logo 样式 */
+        .logo {
+            width: 100px;
+            margin-right: 15px; /* Logo 与文字之间的间距 */
+        }
+
+        /* 文字容器 */
+        .text {
+            font-weight: normal;
+            display: flex;
+            flex-direction: column; /* 中文和英文垂直排列 */
+        }
+
+        /* 文字中英文样式 */
+        .text span {
+            display: block;
+        }
+
+        /* 中文部分字体大小 */
+        .text span:first-child {
+            font-size: 30px; /* 设置中文字体大小 */
+        }
+
+        /* 英文部分字体大小 */
+        .text span:nth-child(2) {
+            font-size: 26px; /* 设置英文1的字体大小 */
+        }
+
+        .text span:nth-child(3) {
+            font-size: 18px; /* 设置英文2的字体大小 */
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 72px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px #000000, -2px -2px 4px #000000, 2px -2px 4px #000000, -2px 2px 4px #000000;
+            padding-top: 40%; /* 增加一些顶部空间来调整标题位置 */
+        }
+
+        /* 按钮容器样式 */
+        .btn-container {
+            display: flex; /* 水平排列 */
+            gap: 20px; /* 按钮之间的间距 */
+        }
+
+        /* 按钮样式 */
+        .btn {
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 背景图片层 -->
+    <div class="background"></div>
+
+    <!-- 内容层 -->
+    <div class="content">
+        <!-- Logo 和 文字容器 -->
+        <div class="header">
+            <img src="AP-TCRC-LOGO.png" alt="Logo" class="logo">
+            <div class="text">
+                <span>亚太台风研究中心</span>
+                <span>Asia-Pacific Typhoon</span>
+                <span>Collaborative Research Center</span>
+            </div>
+        </div>
+        <!-- 标题 -->
+        <div class="title">
+            <span>城市三维气象数字孪生系统</span>
+            <span>低空风场与风灾预警</span>
+        </div>
+        <!-- 按钮容器 -->
+        <div class="btn-container">
+            <a href="shanghai\shanghai.html" target="_blank" class="btn"><b>上海陆家嘴<br>（台风梅花）</b></a>
+            <a href="suzhou\suzhou.html" target="_blank" class="btn"><b>苏州工业园<br>（实时模拟）</b></a>
+        </div>
+    </div>
+
+</body>
+</html>
